@@ -1,0 +1,107 @@
+<html>
+<body>
+<style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+}
+
+table {
+    border-spacing: 5px;
+}
+ .button-large1 {
+            font-size: 100%;
+            background:#99ccff;
+            font-family: "Times New Roman";
+            padding: 2px 5px;
+            border-radius: 4px;
+            width: 100px; height: 30px;
+            
+        }
+        body {
+ background-image: url("doctor-header-1.jpg");
+ background-repeat: no-repeat;
+   background-size: 1300px 200px;
+
+</style>
+
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDr2Im1C1lQvrxuQocW4ul69MKwRfc5g6g",
+    authDomain: "denuncias-app.firebaseapp.com",
+    databaseURL: "https://denuncias-app.firebaseio.com",
+    projectId: "denuncias-app",
+    storageBucket: "denuncias-app.appspot.com",
+    messagingSenderId: "885651585540"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<head>
+    <title>Table</title>
+    </head>
+        
+        <input type="button" class="button-large1" onclick="location.href='password.html'"; value="Edit Profile" />
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+    <br>
+<table style="width:70%">
+  <tr id="tr">
+    <th>ID</th>
+    <th>Name</th> 
+    <th>Starting Level</th>
+    <th>Current Level</th>
+    <th>Date/Time Latest</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Start Date</th>
+    <th>Progress Indication</th>
+  </tr>
+  <tr> 
+    <th> <a href="chart.html">ahmad</a></th>
+    <th>test</th> 
+    <th>1</th>
+    <th>4</th>
+    <th>Null</th>
+    <th>7</th>
+    <th>male</th>
+    <th>Null</th>
+    <th>Null</th> 
+  </tr>
+  <tr>
+    <tr>
+  </tr>
+</table>
+
+<script>
+  var database = firebase.database();
+    database.ref().once('value', function(snapshot){
+        if(snapshot.exists()){
+            var content = '';
+            snapshot.forEach(function(data){
+                var val = data.val();
+                content +='<tr>';
+                content += '<td>' + val.ID + '</td>';
+                content += '<td>' + val.Name + '</td>';
+                content += '<td>' + val.StartingLevel + '</td>';
+                content += '<td>' + val.CurrentLevel + '</td>';
+                content += '<td>' + val.DateTime + '</td>';
+                content += '<td>' + val.Age + '</td>';
+                content += '<td>' + val.Gender + '</td>';
+                content += '<td>' + val.StartDate + '</td>';
+                content += '<td>' + val.ProgressIndication + '</td>';
+                content += '</tr>';
+            });
+            $('#ex-table').append(content);
+        }
+    });
+
+</script>
+
+</body>
+</html>

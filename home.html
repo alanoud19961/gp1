@@ -1,0 +1,62 @@
+<html>
+<head>
+
+  <title>Home Page</title>
+    <style>
+   .button-large3 {
+            font-size: 110%;
+            background:#99ccff;
+            font-family: "Times New Roman";
+            padding: 2px 50px;
+            border-radius: 4px;
+            width:20%;
+            height: 40;
+            margin-left:500px;
+
+        }
+        .button-large2 {
+            width:20%;
+            height: 40;
+            margin-left:500px;
+
+
+        }
+           body {
+ background-image: url("doctor-header-1.jpg");
+ background-repeat: no-repeat;
+   background-size: 1300px 200px;
+
+  </style>
+
+  <!-- Custom CSS -->
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br>
+
+    <input type="email" class="button-large2" placeholder="Email..." id="email_field" />
+    <br>  <br>
+    <input type="password" class="button-large2" placeholder="Password..." id="password_field" />
+    <br>  <br>
+    <input type="button" class="button-large3" onclick="location.href='index.html'"; value="Log in" />
+    <br>  <br>
+    <input type="button"; class="button-large3" onclick="location.href='index-reg.html'"; value="Sign Up" />
+            
+
+
+</head>
+<body>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDr2Im1C1lQvrxuQocW4ul69MKwRfc5g6g",
+    authDomain: "denuncias-app.firebaseapp.com",
+    databaseURL: "https://denuncias-app.firebaseio.com",
+    projectId: "denuncias-app",
+    storageBucket: "denuncias-app.appspot.com",
+    messagingSenderId: "885651585540"
+  };
+  firebase.initializeApp(config);
+</script>
+
+</body>
+</html>

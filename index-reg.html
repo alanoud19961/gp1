@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Register</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="stylereg.css">
+     <style>
+       body {
+ background-image: url("doctor-header-1.jpg");
+ background-repeat: no-repeat;
+   background-size: 1300px 200px;
+ </style>
+ 
+  
+</head>
+<body>  
+
+  <div class="container">
+      <div class="contact">
+        <br><br><br><br><br><br>
+        <h3>Register</h3>
+        <div class="alert">you have been registered</div>
+        <form id="registerForm">
+          <p>
+            <label>User Name</label>
+            <input type="text" name="username" id="username" >
+          </p>
+                      <br>
+
+          <p>
+            <label>Email</label>
+            <input type="text" name="email" id="email">
+          </p>
+                       <br>
+
+          <p>
+            <label>Password</label>
+            <input type="password" name="password" id="password" >
+         </p>
+            <br>
+                       
+
+          <p class="full">
+    <label>Type</label>
+            <input type="radio" name="gender" value="male" id="type"> Doctor<br>
+  <input type="radio" name="gender" value="female" id="type"> Admin<br>
+          </p>
+          <p class="full">
+            <button onclick="redirect()">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+<script type="text/javascript">
+    function redirect()
+    {
+    var url = "C:/Users/ahmad/Desktop/firebase/Doctor/index.html";
+    window.location(url);
+    }
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDr2Im1C1lQvrxuQocW4ul69MKwRfc5g6g",
+    authDomain: "denuncias-app.firebaseapp.com",
+    databaseURL: "https://denuncias-app.firebaseio.com",
+    projectId: "denuncias-app",
+    storageBucket: "denuncias-app.appspot.com",
+    messagingSenderId: "885651585540"
+  };
+  firebase.initializeApp(config);
+</script>
+
+</body>
+</html>
